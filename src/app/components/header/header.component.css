@@ -1,0 +1,31 @@
+/* Transições suaves para os submenus */
+[x-cloak] { display: none !important; }
+
+/* Melhorias de usabilidade para mobile */
+@media (max-width: 1023px) {
+  .mobile-menu-item {
+    transition: all 0.3s ease;
+  }
+
+  .mobile-submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .mobile-submenu.open {
+    max-height: 500px;
+  }
+}
+
+/* Ajustes de espaçamento para telas pequenas */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+/* Transição suave entre slides */
+[class*="opacity-"] {
+  transition: opacity 500ms ease-in-out;
+}

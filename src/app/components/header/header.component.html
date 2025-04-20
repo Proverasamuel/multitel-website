@@ -1,0 +1,158 @@
+<!-- Top notification bar -->
+<div class="text-white text-center py-2 text-sm px-4" style="background-color: #1E79AA;">
+  Precisa de ajuda? Ligue para nossa linha de ajuda: <span class="font-bold">222 704 200</span> (dias úteis das 7h às 17:30h)
+</div>
+
+<!-- Header -->
+<header class="bg-white shadow-md">
+  <div class="container mx-auto px-32">
+    <!-- Upper header with logo and search -->
+    <div class="flex items-center justify-between h-16 py-4">
+      <div class="flex items-center w-full">
+        <!-- Mobile menu button -->
+        <div class="md:hidden mr-4">
+          <button class="text-gray-500 hover:text-blue-700 focus:outline-none"
+                  (click)="toggleMobileMenu()"
+                  aria-label="Toggle menu">
+            <svg *ngIf="!mobileMenu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg *ngIf="mobileMenu" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <img class="h-8 w-auto" src="images/logoo.png" alt="Multitel logo">
+        </div>
+
+        <!-- Main Menu - Desktop -->
+        <div class="hidden md:flex md:ml-6 md:space-x-2">
+          <ul class="flex space-x-6 lg:space-x-8 text-sm">
+            <li class="group relative">
+              <a href="#"
+                class="text-gray-700 hover:text-blue-700 font-medium pb-2 border-b-2 border-transparent hover:border-blue-700 transition-colors duration-200"
+                [class.text-blue-700]="activeTab === 'home'"
+                [class.border-blue-700]="activeTab === 'home'"
+                (click)="setActiveTab('home')">
+                Para Sua Casa
+              </a>
+            </li>
+            <li class="group relative">
+              <a href="#"
+                class="text-gray-700 hover:text-blue-700 font-medium pb-2 border-b-2 border-transparent hover:border-blue-700 transition-colors duration-200"
+                [class.text-blue-700]="activeTab === 'business'"
+                [class.border-blue-700]="activeTab === 'business'"
+                (click)="setActiveTab('business')">
+                Para Empresas
+              </a>
+            </li>
+            <li class="group relative">
+              <a href="#"
+                class="text-gray-700 hover:text-blue-700 font-medium pb-2 border-b-2 border-transparent hover:border-blue-700 transition-colors duration-200"
+                [class.text-blue-700]="activeTab === 'partners'"
+                [class.border-blue-700]="activeTab === 'partners'"
+                (click)="setActiveTab('partners')">
+                Mais Multitel
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- Desktop search and buttons container -->
+        <div class="flex items-center justify-end flex-1 space-x-4">
+          <!-- Desktop search -->
+          <div class="hidden md:block ml-4 w-full max-w-xs">
+            <div class="relative">
+              <input
+                type="text"
+                placeholder="Procurar"
+                class="w-full pl-3 pr-10 py-2 border rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+              <button class="absolute right-0 top-0 mt-2 mr-3 text-gray-400 hover:text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Desktop navigation buttons -->
+          <div class="hidden md:flex items-center space-x-2 lg:space-x-4">
+            <button type="button" style="background-color: #1D3E8F;" class="text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 lg:px-5 lg:py-2.5 text-center inline-flex items-center me-2 transition-colors duration-200">
+              <svg class="w-3.5 h-3.5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 21">
+                <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z"/>
+              </svg>
+              <span class="hidden lg:inline">Área do Cliente</span>
+            </button>
+            <button type="button" style="background-color: #1D3E8F;" class="text-white hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-4 py-2 lg:px-5 lg:py-2.5 text-center inline-flex items-center transition-colors duration-200">
+              <span class="hidden lg:inline">Aderir Serviço</span>
+              <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab-based navigation content -->
+    <nav class="hidden md:block py-3 border-t">
+      <ul class="flex space-x-6 lg:space-x-8 text-sm">
+        <li *ngFor="let item of tabs[activeTab]" class="group relative">
+          <a [href]="item.link" class="text-gray-700 hover:text-blue-700 font-medium pb-2 border-b-2 border-transparent hover:border-blue-700 transition-colors duration-200">
+            {{ item.name }}
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div class="md:hidden" *ngIf="mobileMenu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <!-- Mobile menu items -->
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-700 hover:bg-gray-50"
+           (click)="setActiveTab('home'); mobileMenu = false">
+          Para Sua Casa
+        </a>
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-700 hover:bg-gray-50"
+           (click)="setActiveTab('business'); mobileMenu = false">
+          Para Empresas
+        </a>
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-700 hover:bg-gray-50"
+           (click)="setActiveTab('partners'); mobileMenu = false">
+          Parceiros
+        </a>
+
+        <!-- Mobile submenu items -->
+        <div class="px-3 py-2">
+          <div *ngFor="let item of tabs[activeTab]" class="ml-4">
+            <a [href]="item.link" class="block py-1 text-sm text-gray-600 hover:text-blue-700">
+              {{ item.name }}
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile buttons -->
+        <div class="px-3 pt-4 pb-2 flex space-x-2">
+          <button type="button" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center inline-flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 21">
+              <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z"/>
+            </svg>
+            Área do Cliente
+          </button>
+          <button type="button" class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center inline-flex items-center justify-center">
+            Aderir Serviço
+            <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
