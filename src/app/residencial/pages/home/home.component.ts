@@ -6,11 +6,12 @@ import { ServicosComponent } from '../../components/servicos/servicos.component'
 import { AboutComponent } from '../../components/about/about.component';
 import { CtaComponent } from '../../components/cta/cta.component';
 import { LetterComponent } from '../../../components/letter/letter.component';
+import { PlanosComponent } from "../../components/planos/planos.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CarroselComponent, RecursosComponent, OfertasComponent, ServicosComponent, AboutComponent,CtaComponent, LetterComponent],
+  imports: [CarroselComponent, RecursosComponent, OfertasComponent, ServicosComponent, AboutComponent, CtaComponent, LetterComponent, PlanosComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

@@ -1,0 +1,71 @@
+<div class="relative w-full overflow-hidden">
+    <!-- Carrossel container -->
+    <div class="relative h-[300px] sm:h-[400px] md:h-[500px]">
+      <!-- Slides -->
+      <div *ngFor="let slide of slides; let i = index"
+           [class.hidden]="currentSlide !== i"
+           class="absolute inset-0 w-full transition-opacity duration-500"
+           [class.opacity-0]="currentSlide !== i"
+           [class.opacity-100]="currentSlide === i">
+  
+        <!-- Background image -->
+        <div class="absolute inset-0 w-full h-full aspect-video sm:aspect-auto">
+          <img
+            [src]="slide.image"
+            [alt]="slide.titlePart1 + slide.titlePart2"
+            class="w-full h-full object-cover object-center sm:object-center md:object-[50%_30%]"
+          >
+          <div class="absolute inset-0 bg-[#0A2025]/30"></div>
+        </div>
+  
+        <!-- Content -->
+        <section class="relative z-10 w-full h-full px-4 sm:px-6 md:px-8">
+          <div class="mx-auto flex flex-col lg:flex-row items-center justify-center gap-6 py-10 sm:py-16 lg:py-20 max-w-[1440px] h-full">
+            <div class="max-w-[660px] flex flex-col justify-center items-start gap-6 sm:gap-8">
+              <div class="flex flex-col justify-start items-start gap-2 sm:gap-4">
+                <h1 class="self-stretch">
+                  <span class="block text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Roboto']">
+                    {{slide.titlePart1}}
+                  </span>
+                  <span class="block text-[#3e9d26] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Roboto']">
+                    {{slide.titlePart2}}
+                  </span>
+                </h1>
+                <p class="text-white text-sm sm:text-base md:text-lg font-normal font-['Roboto']">
+                  {{slide.description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+  
+      <!-- Navigation arrows -->
+      <button (click)="prevSlide()"
+              class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-30 text-white p-2 sm:p-3 rounded-full hover:bg-opacity-50 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button (click)="nextSlide()"
+              class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 bg-black bg-opacity-30 text-white p-2 sm:p-3 rounded-full hover:bg-opacity-50 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+  
+      <!-- Indicators -->
+      <div class="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
+        <button *ngFor="let slide of slides; let i = index"
+                (click)="goToSlide(i)"
+                class="w-3 sm:w-4 h-1 rounded transition-all duration-300"
+                [ngClass]="{
+                  'bg-[#3e9d26]': currentSlide === i,
+                  'bg-gray-400': currentSlide !== i
+                }">
+          <span class="sr-only">Ir para slide {{i + 1}}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  
