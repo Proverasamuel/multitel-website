@@ -1,0 +1,133 @@
+<!-- voz.component.html -->
+<div class="min-h-screen bg-gray-50">
+  <app-hero-voz></app-hero-voz>
+
+
+  <app-info-servico-voz></app-info-servico-voz>
+
+  <!-- Planos Section -->
+<app-plano-voz></app-plano-voz>
+
+
+  <!-- CTA Section -->
+  <section class="w-full">
+    <div class="relative flex flex-col md:flex-row">
+      <img class="w-full h-auto hidden md:inline md:h-52 2xl:h-64 md:w-1/4 cursor-pointer hover:contrast-150 transition-all duration-300" src="https://images.unsplash.com/photo-1671726805768-93b4c260766b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="" alt="" />
+      <img class="w-full h-auto hidden md:inline md:h-52 2xl:h-64 md:w-1/4 cursor-pointer hover:contrast-150 transition-all duration-300" src="https://images.unsplash.com/photo-1664575599618-8f6bd76fc670?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="" alt="" />
+      <img class="w-full h-auto hidden md:inline md:h-52 2xl:h-64 md:w-1/4 cursor-pointer hover:contrast-150 transition-all duration-300" src="https://images.unsplash.com/photo-1640622843377-6b5af9417e70?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="" alt="" />
+      <img class="w-full h-auto md:h-52 2xl:h-64 md:w-1/4 cursor-pointer hover:contrast-150 transition-all duration-300" src="https://images.unsplash.com/photo-1671726805766-07bd41c8ebcf?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" title="" alt="" />
+    </div>
+    <div class="w-full bg-blue-500 py-6 md:py-1">
+        <div class="w-max-3/4 mx-auto sm:4/5 md:w-3/4 lg:w-3/5 py-3 md:py-8 c-py-4 mx-auto flex flex-col md:flex-row items-center justify-items-center">
+          <div class="basis-2/12 xl:basis-1/12">
+           </div>
+
+          <div class="w-max-1/6 mx-auto md:w-auto text-center text-xl font-semibold text-white py-2 px-8 cursor-pointer md:!text-start border-2 border-white rounded-md hover:bg-white hover:!text-emerald-500 transition-all duration-300">
+            <button>Click to start</button>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Funcionalidades Section -->
+  <div class="py-16 sm:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          Funcionalidades
+        </h2>
+        <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
+          Conheça todas as funcionalidades para uma gestão mais eficaz das chamadas
+        </p>
+      </div>
+
+      <div class="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <!-- Funcionalidade 1 -->
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-lg font-medium text-gray-900">Marcação Rápida Corporativa</h3>
+          <p class="mt-2 text-base text-gray-600">
+            Acesso rápido aos contactos internos com apenas alguns dígitos
+          </p>
+        </div>
+
+        <!-- Funcionalidade 2 -->
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-lg font-medium text-gray-900">Captura de Chamadas Direta</h3>
+          <p class="mt-2 text-base text-gray-600">
+            Identificação imediata do destinatário das chamadas
+          </p>
+        </div>
+
+        <!-- Funcionalidade 3 -->
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-lg font-medium text-gray-900">Pré-atendimento</h3>
+          <p class="mt-2 text-base text-gray-600">
+            Configuração personalizada antes do atendimento da chamada
+          </p>
+        </div>
+
+        <!-- Funcionalidade 4 -->
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-lg font-medium text-gray-900">Fila de Espera</h3>
+          <p class="mt-2 text-base text-gray-600">
+            Gestão organizada de chamadas em espera com música personalizada
+          </p>
+        </div>
+
+        <!-- Funcionalidade 5 -->
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-lg font-medium text-gray-900">Reencaminhamento de Chamadas</h3>
+          <p class="mt-2 text-base text-gray-600">
+            Redirecionamento fácil para outros números ou dispositivos
+          </p>
+        </div>
+
+        <!-- Funcionalidade 6 -->
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-600 text-white">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+            </svg>
+          </div>
+          <h3 class="mt-6 text-lg font-medium text-gray-900">Transferência de Chamadas</h3>
+          <p class="mt-2 text-base text-gray-600">
+            Transferência simples e eficiente entre colaboradores
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-letter></app-letter>
+
+
+</div>
+
+
+
+

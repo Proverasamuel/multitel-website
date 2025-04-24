@@ -1,0 +1,26 @@
+<section class="relative h-[75vh] flex flex-col items-center justify-center text-center text-white">
+  <div class="video-docker absolute top-0 left-0 w-full h-full overflow-hidden">
+    <video
+      #bgVideo
+      class="min-w-full min-h-full absolute object-cover"
+      [muted]="isMuted"
+      autoplay
+      loop
+    >
+      <source
+        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4"
+        type="video/mp4"
+      />
+    </video>
+  </div>
+
+  <div class="video-content space-y-2 z-10">
+    <h1 class="text-4xl font-bold">Bem-vindo ao Hero!</h1>
+    <button
+      (click)="toggleMute()"
+      class="mt-4 px-4 py-2 bg-black bg-opacity-50 rounded hover:bg-opacity-75 transition"
+    >
+      {{ isMuted ? '🔇 Ativar Som' : '🔊 Silenciar' }}
+    </button>
+  </div>
+</section>

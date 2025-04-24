@@ -1,0 +1,18 @@
+/* Add to your component's CSS file */
+:host {
+  display: block;
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+}
+
+/* Animation for the sub-buttons */
+[style*="translate"] {
+  transition: all 0.3s ease-out;
+  opacity: 0;
+}
+
+.is-open [style*="translate"] {
+  opacity: 1;
+}

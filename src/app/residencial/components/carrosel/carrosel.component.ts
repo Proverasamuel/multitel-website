@@ -21,14 +21,14 @@ export class CarroselComponent implements OnInit, OnDestroy {
       buttonText: "",
       image: "/images/BannerGames.png" // Make sure this path is correct
     },
-    {
+    /* {
       titlePart1: "",
       titlePart2: "",
       description: "",
       ctaText: "",
       buttonText: "",
       image: "/images/drone.png" // Update with your second image path
-    },
+    }, */
     {
       titlePart1: "",
       titlePart2: "",

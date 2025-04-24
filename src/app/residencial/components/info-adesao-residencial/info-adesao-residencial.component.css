@@ -1,0 +1,14 @@
+/* Dark mode transitions */
+.dark {
+  transition: background-color 0.3s ease;
+}
+
+/* Custom checkbox style */
+.form-checkbox {
+  transition: all 0.2s ease;
+}
+
+/* Button hover effects */
+button:not(:disabled) {
+  transition: all 0.2s ease;
+}
