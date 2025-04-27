@@ -44,10 +44,10 @@ export class HeaderComponent {
       { name: 'Redes Privativas', link: '/empresarial/redes-privativas' }
     ],
     partners: [
-      { name: 'Eventos', link: '#' },
-      { name: 'Parceiros', link: '#' },
-      { name: 'Noticias', link: '#' },
-      { name: 'Carreira', link: '#' }
+      { name: 'Eventos', link: '/mais/eventos' },
+      { name: 'Parceiros', link: '/mais/parceiros' },
+      { name: 'Noticias', link: '/mais/noticias' },
+      { name: 'Carreira', link: '/mais/carreira' }
     ]
   };
 

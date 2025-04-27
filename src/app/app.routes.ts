@@ -13,6 +13,10 @@ import { HomeComponent } from './residencial/pages/home/home.component';
 import { PlanosComponent } from './residencial/pages/planos/planos.component';
 import { HospedagemComponent } from './empresarial/pages/hospedagem/hospedagem.component';
 import { RedesComponent } from './empresarial/pages/redes/redes.component';
+import { EventosComponent } from './mais-multitel/pages/eventos/eventos.component';
+import { NoticiasComponent } from './mais-multitel/pages/noticias/noticias.component';
+import { ParceirosComponent } from './mais-multitel/pages/parceiros/parceiros.component';
+import { CarreiraComponent } from './mais-multitel/pages/carreira/carreira.component';
 
 
 
@@ -20,12 +24,16 @@ import { RedesComponent } from './empresarial/pages/redes/redes.component';
 export const routes: Routes = [
   {
     path: '',
+    redirectTo: 'residencial',
+    pathMatch: 'full'
+  },
+  {
+    path: '',
     component: MainComponent,
     children: [
       {
         path: 'residencial',
         children: [
-          { path: '', redirectTo: '', pathMatch: 'full' },
           { path: '', component: HomeComponent, title: 'Residencial' },
           { path: 'planos', component: PlanosComponent, title: 'Planos' },
           { path: 'smart', component: SmartComponent, title: 'Smart' },
@@ -48,17 +56,22 @@ export const routes: Routes = [
       {
         path: 'mais',
         children: [
-          { path: 'multitel', component: HomeMaisMultitelComponent }
+          { path: 'multitel', component: HomeMaisMultitelComponent },
+          { path: 'eventos', component: EventosComponent },
+          { path: 'noticias', component: NoticiasComponent },
+          { path: 'parceiros', component: ParceirosComponent },
+          { path: 'carreira', component: CarreiraComponent }
         ]
       },
     ]
   },
-  // ✅ Login separado do layout principal
   { path: 'login', component: LoginComponent },
 
-  // ✅ Rota 404 global
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  // ✅ Rota 404 agora redireciona para /residencial
+  { path: '**', redirectTo: 'residencial', pathMatch: 'full' }
 ];
+
+
 
 
 
